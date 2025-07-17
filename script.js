@@ -418,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         // Konkrét mérkőzés opciók megjelenítése/elrejtése
-        const supportsSpecificMatch = ['football', 'basketball', 'tennis'].includes(key);
+        const supportsSpecificMatch = ['football', 'basketball', 'tennis', 'ice_hockey', 'baseball', 'american_football', 'boxing', 'mma'].includes(key);
         if (elements.specificMatchOptions) {
             elements.specificMatchOptions.classList.toggle('hidden', !supportsSpecificMatch);
             
@@ -606,7 +606,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- SPECIFIC MATCH PROMPT GENERATION ---
     const updatePromptText = () => {
-        if (!currentlySelectedKey || !['football', 'basketball', 'tennis'].includes(currentlySelectedKey)) {
+        if (!currentlySelectedKey) {
             return;
         }
         
