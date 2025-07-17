@@ -3,257 +3,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Sports Betting Prompt Library</title>
+    <title>Professional Sports Betting & Analysis Prompt Library</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="text-white">
-    <!-- Floating Background Elements -->
+    <!-- Enhanced Floating Background Elements -->
     <div class="floating-elements">
-        <div class="floating-circle w-72 h-72 top-10 left-10 opacity-20" style="animation-delay: -2s; animation-duration: 18s;"></div>
-        <div class="floating-circle w-40 h-40 top-1/3 right-20 opacity-15" style="animation-delay: -5s; animation-duration: 14s;"></div>
-        <div class="floating-circle w-56 h-56 bottom-20 left-1/4 opacity-25" style="animation-delay: -1s; animation-duration: 20s;"></div>
-        <div class="floating-circle w-32 h-32 top-2/3 right-1/3 opacity-10" style="animation-delay: -7s; animation-duration: 16s;"></div>
+        <div class="floating-circle w-96 h-96 top-10 left-10 opacity-15" style="animation-delay: -2s; animation-duration: 20s;"></div>
+        <div class="floating-circle w-48 h-48 top-1/4 right-20 opacity-10" style="animation-delay: -5s; animation-duration: 16s;"></div>
+        <div class="floating-circle w-64 h-64 bottom-20 left-1/4 opacity-20" style="animation-delay: -1s; animation-duration: 22s;"></div>
+        <div class="floating-circle w-40 h-40 top-2/3 right-1/3 opacity-8" style="animation-delay: -7s; animation-duration: 18s;"></div>
+        <div class="floating-circle w-80 h-80 bottom-1/4 right-10 opacity-12" style="animation-delay: -3s; animation-duration: 24s;"></div>
     </div>
 
-    <div id="page-top" class="container mx-auto px-4 py-6 lg:py-12 max-w-7xl relative z-10">
-        <!-- Header -->
-        <header class="text-center mb-8 lg:mb-16 flex flex-col items-center relative">
-            <div class="absolute right-0 top-0 flex gap-2 z-20">
-                <button id="theme-toggle" class="bg-slate-700 hover:bg-slate-600 text-white rounded-full p-3 transition-all duration-300 transform hover:scale-110 hover:rotate-12" title="Toggle Theme">
-                    <span id="theme-icon" class="text-xl">🌙</span>
+    <div id="page-top" class="container mx-auto px-4 py-8 lg:py-16 max-w-8xl relative z-10">
+        <!-- Enhanced Header -->
+        <header class="text-center mb-12 lg:mb-20 flex flex-col items-center relative">
+            <div class="absolute right-0 top-0 flex gap-3 z-20">
+                <button id="theme-toggle" class="bg-slate-700/80 hover:bg-slate-600/80 backdrop-blur-sm text-white rounded-full p-4 transition-all duration-300 transform hover:scale-110 hover:rotate-12 shadow-lg" title="Toggle Theme">
+                    <span id="theme-icon" class="text-2xl">🌙</span>
                 </button>
             </div>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight header-glow mb-6">AI Prompt Library</h1>
-            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">Professional collection of editable sports betting and political analysis prompts with modern design and advanced features.</p>
+            
+            <div class="mb-8">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight header-glow mb-6">
+                    Professional Sports Analytics
+                </h1>
+                <div class="text-2xl md:text-3xl font-bold text-blue-400 mb-4">AI Prompt Library</div>
+            </div>
+            
+            <p class="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed font-medium">
+                Advanced collection of professional sports betting analysis prompts with comprehensive match analysis, 
+                political forecasting, and cutting-edge AI-powered insights for serious analysts and professionals.
+            </p>
+            
+            <div class="mt-8 flex flex-wrap gap-4 justify-center">
+                <div class="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-full px-6 py-3 border border-green-500/30">
+                    <span class="text-green-400 font-semibold">✓ Professional Grade</span>
+                </div>
+                <div class="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-full px-6 py-3 border border-blue-500/30">
+                    <span class="text-blue-400 font-semibold">⚡ Real-time Analysis</span>
+                </div>
+                <div class="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-full px-6 py-3 border border-purple-500/30">
+                    <span class="text-purple-400 font-semibold">🎯 Match Specific</span>
+                </div>
+            </div>
         </header>
 
-        <!-- Search and Filter -->
-        <div class="mb-8 lg:mb-12">
-            <div class="search-box rounded-2xl p-4 mb-6 transition-all duration-300">
-                <div class="flex items-center gap-3">
-                    <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                    <label for="search-input" class="sr-only">Search for sports or topics</label>
-                    <input type="text" id="search-input" placeholder="Search for sports or topics..." class="bg-transparent border-none outline-none text-white w-full text-lg placeholder-slate-400">
+        <!-- Enhanced Search and Filter -->
+        <div class="mb-12 lg:mb-16">
+            <div class="search-box rounded-3xl p-6 mb-8 transition-all duration-300 shadow-2xl">
+                <div class="flex items-center gap-4">
+                    <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <label for="search-input" class="sr-only">Search for sports, politics, or analysis topics</label>
+                    <input type="text" id="search-input" placeholder="Search for sports, politics, or analysis topics..." 
+                           class="bg-transparent border-none outline-none text-white w-full text-xl placeholder-slate-400 font-medium">
                 </div>
             </div>
             
-            <div class="flex flex-wrap gap-3 justify-center items-center">
-                <button class="category-filter category-badge px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300" data-category="all">All</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="favorites">⭐ Favorites</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="traditional">Traditional</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="esports">E-Sports</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="motor">Motorsport</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="virtual">Virtual</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="water">Water Sports</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="precision">Precision</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="winter">Winter</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="combat">Combat</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="politics">Politics</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="logic">Logic</button>
-                <button id="add-new-prompt-btn" class="btn-add-new px-4 py-2 rounded-full text-sm font-semibold transition-transform hover:scale-105">Add New Prompt</button>
+            <div class="flex flex-wrap gap-4 justify-center items-center">
+                <button class="category-filter category-badge px-6 py-3 rounded-full text-sm font-bold transition-all duration-300 shadow-lg" data-category="all">🌟 All Categories</button>
+                <button class="category-filter px-6 py-3 rounded-full text-sm font-bold bg-slate-700/80 hover:bg-slate-600/80 backdrop-blur-sm transition-all duration-300 shadow-lg" data-category="favorites">⭐ Favorites</button>
+                <button class="category-filter px-6 py-3 rounded-full text-sm font-bold bg-slate-700/80 hover:bg-slate-600/80 backdrop-blur-sm transition-all duration-300 shadow-lg" data-category="traditional">🏆 Traditional Sports</button>
+                <button class="category-filter px-6 py-3 rounded-full text-sm font-bold bg-slate-700/80 hover:bg-slate-600/80 backdrop-blur-sm transition-all duration-300 shadow-lg" data-category="american">🇺🇸 American Sports</button>
+                <button class="category-filter px-6 py-3 rounded-full text-sm font-bold bg-slate-700/80 hover:bg-slate-600/80 backdrop-blur-sm transition-all duration-300 shadow-lg" data-category="esports">🎮 E-Sports</button>
+                <button class="category-filter px-6 py-3 rounded-full text-sm font-bold bg-slate-700/80 hover:bg-slate-600/80 backdrop-blur-sm transition-all duration-300 shadow-lg" data-category="motor">🏎️ Motorsport</button>
+                <button class="category-filter px-6 py-3 rounded-full text-sm font-bold bg-slate-700/80 hover:bg-slate-600/80 backdrop-blur-sm transition-all duration-300 shadow-lg" data-category="combat">🥊 Combat Sports</button>
+                <button class="category-filter px-6 py-3 rounded-full text-sm font-bold bg-slate-700/80 hover:bg-slate-600/80 backdrop-blur-sm transition-all duration-300 shadow-lg" data-category="water">🏊 Water Sports</button>
+                <button class="category-filter px-6 py-3 rounded-full text-sm font-bold bg-slate-700/80 hover:bg-slate-600/80 backdrop-blur-sm transition-all duration-300 shadow-lg" data-category="winter">❄️ Winter Sports</button>
+                <button class="category-filter px-6 py-3 rounded-full text-sm font-bold bg-slate-700/80 hover:bg-slate-600/80 backdrop-blur-sm transition-all duration-300 shadow-lg" data-category="precision">🎯 Precision Sports</button>
+                <button class="category-filter px-6 py-3 rounded-full text-sm font-bold bg-slate-700/80 hover:bg-slate-600/80 backdrop-blur-sm transition-all duration-300 shadow-lg" data-category="politics">🗳️ Politics</button>
+                <button class="category-filter px-6 py-3 rounded-full text-sm font-bold bg-slate-700/80 hover:bg-slate-600/80 backdrop-blur-sm transition-all duration-300 shadow-lg" data-category="logic">🧠 Logic & Strategy</button>
+                <button id="add-new-prompt-btn" class="btn-add-new px-6 py-3 rounded-full text-sm font-bold transition-transform hover:scale-105 shadow-lg">➕ Add New Prompt</button>
             </div>
         </div>
 
-        <!-- Sports Grid -->
-        <div id="sports-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 lg:gap-6 mb-8 lg:mb-12"></div>
-        <div id="no-results" class="text-center py-10" style="display: none;"><p class="text-xl text-slate-400 font-medium">No sports or topics match your filter.</p></div>
+        <!-- Enhanced Sports Grid -->
+        <div id="sports-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6 lg:gap-8 mb-12 lg:mb-16"></div>
+        <div id="no-results" class="text-center py-16" style="display: none;">
+            <div class="text-6xl mb-4">🔍</div>
+            <p class="text-2xl text-slate-400 font-semibold">No matches found</p>
+            <p class="text-lg text-slate-500 mt-2">Try adjusting your search or filter criteria</p>
+        </div>
         <div id="load-more-sentinel" class="h-1"></div>
 
-        <!-- Prompt Display -->
-        <div id="prompt-container" class="prompt-container rounded-3xl p-6 lg:p-10 shadow-2xl prompt-transition prompt-hidden">
-            <button id="close-prompt-button" aria-label="Close prompt" class="absolute top-4 right-5 text-slate-400 hover:text-white transition-all duration-300 text-3xl leading-none hover:scale-110 hover:rotate-90">&times;</button>
-            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                <div>
-                    <h2 id="prompt-title" class="text-2xl lg:text-4xl font-bold text-blue-400 mb-2"></h2>
-                    <p id="prompt-category" class="text-slate-400 text-sm"></p>
+        <!-- Enhanced Prompt Display -->
+        <div id="prompt-container" class="prompt-container rounded-3xl p-8 lg:p-12 shadow-2xl prompt-transition prompt-hidden">
+            <button id="close-prompt-button" aria-label="Close prompt" 
+                    class="absolute top-6 right-6 text-slate-400 hover:text-white transition-all duration-300 text-4xl leading-none hover:scale-110 hover:rotate-90 z-10">&times;</button>
+            
+            <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-8">
+                <div class="flex-1">
+                    <h2 id="prompt-title" class="text-3xl lg:text-5xl font-black text-blue-400 mb-3"></h2>
+                    <p id="prompt-category" class="text-slate-400 text-lg font-medium"></p>
+                    <div id="prompt-stats" class="flex gap-6 mt-4 text-sm">
+                        <div class="flex items-center gap-2">
+                            <span class="text-green-400">📊</span>
+                            <span class="text-slate-300">Effectiveness: <span id="effectiveness-display" class="font-bold text-green-400">75%</span></span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-blue-400">📋</span>
+                            <span class="text-slate-300">Copied: <span id="copy-count-display" class="font-bold text-blue-400">0</span> times</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex gap-3 mt-4 lg:mt-0">
-                    <button id="edit-button" class="bg-slate-600 hover:bg-slate-500 text-white font-semibold py-3 px-6 rounded-xl flex items-center gap-2 transition-all duration-300 transform hover:scale-105">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                
+                <div class="flex gap-4 mt-6 lg:mt-0 lg:ml-8">
+                    <button id="favorite-button" class="bg-yellow-600/20 hover:bg-yellow-500/30 border border-yellow-500/50 text-yellow-400 font-bold py-3 px-6 rounded-xl flex items-center gap-2 transition-all duration-300 transform hover:scale-105">
+                        <span id="favorite-icon">⭐</span>
+                        <span id="favorite-text">Favorite</span>
+                    </button>
+                    <button id="edit-button" class="bg-slate-600/80 hover:bg-slate-500/80 backdrop-blur-sm text-white font-bold py-3 px-6 rounded-xl flex items-center gap-2 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                        </svg>
                         Edit
                     </button>
-                    <button id="copy-button" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl flex items-center gap-2 transition-all duration-300 transform hover:scale-105">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h1V1.5z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg>
-                        <span id="copy-text">Copy</span>
+                    <button id="copy-button" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-xl flex items-center gap-2 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h1V1.5z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        <span id="copy-text">Copy Prompt</span>
                     </button>
                 </div>
             </div>
-            <div class="relative">
-                <textarea id="prompt-text" readonly class="w-full h-80 lg:h-96 bg-slate-900/50 border border-slate-600 rounded-2xl p-6 text-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none text-sm lg:text-base leading-relaxed transition-all duration-300"></textarea>
+            
+            <div class="relative mb-6">
+                <textarea id="prompt-text" readonly 
+                          class="w-full h-96 lg:h-[500px] bg-slate-900/60 backdrop-blur-sm border border-slate-600/50 rounded-2xl p-8 text-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none text-base lg:text-lg leading-relaxed transition-all duration-300 shadow-inner"></textarea>
             </div>
             
-            <!-- Effectiveness Slider -->
-            <div class="mt-4 p-4 bg-slate-800/30 rounded-xl border border-slate-600/50">
-                <div class="flex items-center justify-between mb-2">
-                    <label for="effectiveness-slider" class="text-sm font-medium text-slate-300">Prompt Effectiveness</label>
-                    <span id="effectiveness-value" class="text-sm font-bold text-blue-400">75%</span>
+            <!-- Enhanced Effectiveness Slider -->
+            <div class="mb-6 p-6 bg-slate-800/40 backdrop-blur-sm rounded-2xl border border-slate-600/50 shadow-lg">
+                <div class="flex items-center justify-between mb-4">
+                    <label for="effectiveness-slider" class="text-lg font-bold text-slate-300 flex items-center gap-2">
+                        <span class="text-2xl">📊</span>
+                        Prompt Effectiveness Rating
+                    </label>
+                    <span id="effectiveness-value" class="text-xl font-black text-blue-400 bg-blue-500/20 px-4 py-2 rounded-full">75%</span>
                 </div>
                 <input type="range" id="effectiveness-slider" min="1" max="100" value="75" 
-                       class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer slider-thumb">
-                <div class="flex justify-between text-xs text-slate-400 mt-1">
-                    <span>Low (1%)</span>
-                    <span>Medium (50%)</span>
-                    <span>High (100%)</span>
+                       class="w-full h-3 bg-slate-700/50 rounded-lg appearance-none cursor-pointer slider-thumb mb-2">
+                <div class="flex justify-between text-sm text-slate-400 font-medium">
+                    <span class="flex items-center gap-1"><span class="text-red-400">🔴</span> Low (1%)</span>
+                    <span class="flex items-center gap-1"><span class="text-yellow-400">🟡</span> Medium (50%)</span>
+                    <span class="flex items-center gap-1"><span class="text-green-400">🟢</span> High (100%)</span>
                 </div>
             </div>
             
-            <!-- Specific Match and Date Options -->
-            <div id="specific-match-options" class="mt-4 p-4 bg-slate-800/30 rounded-xl border border-slate-600/50 hidden">
-                <h4 class="text-sm font-medium text-slate-300 mb-3">🎯 Specific Analysis Options</h4>
+            <!-- Enhanced Specific Match and Analysis Options -->
+            <div id="specific-match-options" class="mb-6 p-6 bg-slate-800/40 backdrop-blur-sm rounded-2xl border border-slate-600/50 shadow-lg hidden">
+                <h4 class="text-xl font-bold text-slate-300 mb-6 flex items-center gap-3">
+                    <span class="text-3xl">🎯</span>
+                    Specific Match Analysis Options
+                </h4>
                 
-                <!-- Specific Match Option -->
-                <div class="mb-3">
-                    <label class="flex items-center space-x-2 cursor-pointer">
-                        <input type="checkbox" id="specific-match-checkbox" class="form-checkbox h-4 w-4 text-blue-600 bg-slate-700 border-slate-600 rounded focus:ring-blue-500">
-                        <span class="text-sm text-slate-300"><span id="sport-icon">⚽</span> Specify match details</span>
-                    </label>
-                    <div id="match-input-container" class="mt-2 hidden">
-                        <input type="text" id="specific-match-input" placeholder="e.g., Barcelona vs Real Madrid" 
-                               class="w-full p-2 bg-slate-700 border border-slate-600 rounded-lg text-slate-200 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Specific Match Option -->
+                    <div class="space-y-3">
+                        <label class="flex items-center space-x-3 cursor-pointer group">
+                            <input type="checkbox" id="specific-match-checkbox" 
+                                   class="form-checkbox h-5 w-5 text-blue-600 bg-slate-700 border-slate-600 rounded focus:ring-blue-500 transition-all duration-300">
+                            <span class="text-base text-slate-300 font-medium group-hover:text-white transition-colors">
+                                <span id="sport-icon" class="text-xl mr-2">⚽</span> Specify match details
+                            </span>
+                        </label>
+                        <div id="match-input-container" class="hidden">
+                            <input type="text" id="specific-match-input" placeholder="e.g., Barcelona vs Real Madrid" 
+                                   class="w-full p-4 bg-slate-700/50 border border-slate-600 rounded-xl text-slate-200 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Specific Date Option -->
-                <div class="mb-3">
-                    <label class="flex items-center space-x-2 cursor-pointer">
-                        <input type="checkbox" id="specific-date-checkbox" class="form-checkbox h-4 w-4 text-blue-600 bg-slate-700 border-slate-600 rounded focus:ring-blue-500">
-                        <span class="text-sm text-slate-300">📅 Specify date</span>
-                    </label>
-                    <div id="date-input-container" class="mt-2 hidden">
-                        <input type="date" id="specific-date-input" 
-                               class="w-full p-2 bg-slate-700 border border-slate-600 rounded-lg text-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    
+                    <!-- Specific Date Option -->
+                    <div class="space-y-3">
+                        <label class="flex items-center space-x-3 cursor-pointer group">
+                            <input type="checkbox" id="specific-date-checkbox" 
+                                   class="form-checkbox h-5 w-5 text-blue-600 bg-slate-700 border-slate-600 rounded focus:ring-blue-500 transition-all duration-300">
+                            <span class="text-base text-slate-300 font-medium group-hover:text-white transition-colors">
+                                <span class="text-xl mr-2">📅</span> Specify date
+                            </span>
+                        </label>
+                        <div id="date-input-container" class="hidden">
+                            <input type="date" id="specific-date-input" 
+                                   class="w-full p-4 bg-slate-700/50 border border-slate-600 rounded-xl text-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
+                        </div>
                     </div>
-                </div>
-                
-                <!-- League/Tournament Option -->
-                <div class="mb-3">
-                    <label class="flex items-center space-x-2 cursor-pointer">
-                        <input type="checkbox" id="specific-league-checkbox" class="form-checkbox h-4 w-4 text-blue-600 bg-slate-700 border-slate-600 rounded focus:ring-blue-500">
-                        <span class="text-sm text-slate-300">🏆 Specify league/tournament</span>
-                    </label>
-                    <div id="league-input-container" class="mt-2 hidden">
-                        <input type="text" id="specific-league-input" placeholder="e.g., Premier League, Champions League" 
-                               class="w-full p-2 bg-slate-700 border border-slate-600 rounded-lg text-slate-200 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    
+                    <!-- League/Tournament Option -->
+                    <div class="space-y-3">
+                        <label class="flex items-center space-x-3 cursor-pointer group">
+                            <input type="checkbox" id="specific-league-checkbox" 
+                                   class="form-checkbox h-5 w-5 text-blue-600 bg-slate-700 border-slate-600 rounded focus:ring-blue-500 transition-all duration-300">
+                            <span class="text-base text-slate-300 font-medium group-hover:text-white transition-colors">
+                                <span class="text-xl mr-2">🏆</span> Specify league/tournament
+                            </span>
+                        </label>
+                        <div id="league-input-container" class="hidden">
+                            <input type="text" id="specific-league-input" placeholder="e.g., Premier League, Champions League" 
+                                   class="w-full p-4 bg-slate-700/50 border border-slate-600 rounded-xl text-slate-200 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Season Option -->
-                <div class="mb-3">
-                    <label class="flex items-center space-x-2 cursor-pointer">
-                        <input type="checkbox" id="specific-season-checkbox" class="form-checkbox h-4 w-4 text-blue-600 bg-slate-700 border-slate-600 rounded focus:ring-blue-500">
-                        <span class="text-sm text-slate-300">📊 Specify season</span>
-                    </label>
-                    <div id="season-input-container" class="mt-2 hidden">
-                        <input type="text" id="specific-season-input" placeholder="e.g., 2024-25, 2024" 
-                               class="w-full p-2 bg-slate-700 border border-slate-600 rounded-lg text-slate-200 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    
+                    <!-- Season Option -->
+                    <div class="space-y-3">
+                        <label class="flex items-center space-x-3 cursor-pointer group">
+                            <input type="checkbox" id="specific-season-checkbox" 
+                                   class="form-checkbox h-5 w-5 text-blue-600 bg-slate-700 border-slate-600 rounded focus:ring-blue-500 transition-all duration-300">
+                            <span class="text-base text-slate-300 font-medium group-hover:text-white transition-colors">
+                                <span class="text-xl mr-2">📊</span> Specify season
+                            </span>
+                        </label>
+                        <div id="season-input-container" class="hidden">
+                            <input type="text" id="specific-season-input" placeholder="e.g., 2024-25, 2024" 
+                                   class="w-full p-4 bg-slate-700/50 border border-slate-600 rounded-xl text-slate-200 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div id="copy-feedback" class="text-center text-green-400 mt-4 h-6 transition-all duration-300 opacity-0 font-semibold">✓ Prompt successfully copied to clipboard!</div>
+            <div id="copy-feedback" class="text-center text-green-400 mt-6 h-8 transition-all duration-300 opacity-0 font-bold text-lg">
+                <span class="bg-green-500/20 px-6 py-2 rounded-full border border-green-500/50">
+                    ✓ Prompt successfully copied to clipboard!
+                </span>
+            </div>
             
-            <!-- Tool buttons at bottom of prompt window -->
-            <div class="tools-inline mt-6 flex flex-wrap gap-4 justify-center" id="tools-inline" style="display:none;">
-                <button id="export-btn-inline" class="tool-btn px-4 py-2 rounded-full transition-all duration-300" title="Export to JSON">
-                    <span>📥</span><span class="ml-2">Export</span>
+            <!-- Enhanced Tool buttons at bottom of prompt window -->
+            <div class="tools-inline mt-8 flex flex-wrap gap-4 justify-center" id="tools-inline" style="display:none;">
+                <button id="export-btn-inline" class="tool-btn px-6 py-3 rounded-full transition-all duration-300 shadow-lg" title="Export to JSON">
+                    <span class="text-xl">📥</span><span class="ml-3 font-semibold">Export</span>
                 </button>
-                <label for="import-input-inline" class="tool-btn px-4 py-2 rounded-full cursor-pointer transition-all duration-300" title="Import from JSON">
-                    <span>📤</span><span class="ml-2">Import</span>
+                <label for="import-input-inline" class="tool-btn px-6 py-3 rounded-full cursor-pointer transition-all duration-300 shadow-lg" title="Import from JSON">
+                    <span class="text-xl">📤</span><span class="ml-3 font-semibold">Import</span>
                     <input id="import-input-inline" type="file" accept="application/json" class="hidden" />
                 </label>
-                <button id="reset-btn-inline" class="tool-btn px-4 py-2 rounded-full transition-all duration-300" title="Reset to defaults">
-                    <span>🔄</span><span class="ml-2">Reset</span>
+                <button id="reset-btn-inline" class="tool-btn px-6 py-3 rounded-full transition-all duration-300 shadow-lg" title="Reset to defaults">
+                    <span class="text-xl">🔄</span><span class="ml-3 font-semibold">Reset</span>
                 </button>
             </div>
         </div>
             
-        <!-- Tools section at bottom of page -->
-        <div class="tools-section rounded-3xl p-8" id="tools-section">
-            <h2 class="text-2xl font-bold text-center mb-8 text-white">Tools and Settings</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center flex flex-col items-center">
-                    <button id="export-btn" class="bg-green-600 hover:bg-green-700 text-white rounded-full p-4 transition-all duration-300 transform hover:scale-110 mb-3" title="Export to JSON">
-                        <span class="text-2xl">📥</span>
+        <!-- Enhanced Tools section at bottom of page -->
+        <div class="tools-section rounded-3xl p-10" id="tools-section">
+            <h2 class="text-3xl font-black text-center mb-12 text-white flex items-center justify-center gap-4">
+                <span class="text-4xl">🛠️</span>
+                Professional Tools & Settings
+            </h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="text-center flex flex-col items-center group">
+                    <button id="export-btn" class="bg-gradient-to-br from-green-600 to-emerald-700 hover:from-green-700 hover:to-emerald-800 text-white rounded-full p-6 transition-all duration-300 transform hover:scale-110 mb-4 shadow-2xl group-hover:shadow-green-500/25" title="Export to JSON">
+                        <span class="text-3xl">📥</span>
                     </button>
-                    <h3 class="font-semibold mb-2 text-slate-200">Export</h3>
-                    <p class="text-sm text-slate-400">Save all your prompts to a JSON file for backup or sharing.</p>
+                    <h3 class="font-bold mb-3 text-slate-200 text-xl">Export Library</h3>
+                    <p class="text-base text-slate-400 leading-relaxed">Save all your prompts to a JSON file for backup, sharing, or professional use across teams.</p>
                 </div>
-                <div class="text-center flex flex-col items-center">
-                    <label for="import-input" class="inline-block bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 transition-all duration-300 transform hover:scale-110 cursor-pointer mb-3" title="Import from JSON">
-                        <span class="text-2xl">📤</span>
+                <div class="text-center flex flex-col items-center group">
+                    <label for="import-input" class="inline-block bg-gradient-to-br from-blue-600 to-cyan-700 hover:from-blue-700 hover:to-cyan-800 text-white rounded-full p-6 transition-all duration-300 transform hover:scale-110 cursor-pointer mb-4 shadow-2xl group-hover:shadow-blue-500/25" title="Import from JSON">
+                        <span class="text-3xl">📤</span>
                         <input id="import-input" type="file" accept="application/json" class="hidden" />
                     </label>
-                    <h3 class="font-semibold mb-2 text-slate-200">Import</h3>
-                    <p class="text-sm text-slate-400">Load previously saved prompts from a JSON file.</p>
+                    <h3 class="font-bold mb-3 text-slate-200 text-xl">Import Library</h3>
+                    <p class="text-base text-slate-400 leading-relaxed">Load previously saved prompts from a JSON file or import professional prompt collections.</p>
                 </div>
-                <div class="text-center flex flex-col items-center">
-                    <button id="reset-btn" class="bg-red-600 hover:bg-red-700 text-white rounded-full p-4 transition-all duration-300 transform hover:scale-110 mb-3" title="Reset to defaults">
-                        <span class="text-2xl">🔄</span>
+                <div class="text-center flex flex-col items-center group">
+                    <button id="reset-btn" class="bg-gradient-to-br from-red-600 to-rose-700 hover:from-red-700 hover:to-rose-800 text-white rounded-full p-6 transition-all duration-300 transform hover:scale-110 mb-4 shadow-2xl group-hover:shadow-red-500/25" title="Reset to defaults">
+                        <span class="text-3xl">🔄</span>
                     </button>
-                    <h3 class="font-semibold mb-2 text-slate-200">Reset</h3>
-                    <p class="text-sm text-slate-400">Restore original prompts. Warning: all custom prompts will be deleted!</p>
+                    <h3 class="font-bold mb-3 text-slate-200 text-xl">Reset Library</h3>
+                    <p class="text-base text-slate-400 leading-relaxed">Restore original professional prompts. Warning: all custom prompts will be permanently deleted!</p>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- Add/Edit Modal -->
+    <!-- Enhanced Add/Edit Modal -->
     <div id="edit-modal" class="modal-overlay">
         <div class="modal-content">
-            <h3 id="modal-title" class="text-2xl font-bold mb-6 text-white">Edit Prompt</h3>
-            <form id="edit-form" class="space-y-4">
+            <h3 id="modal-title" class="text-3xl font-black mb-8 text-white flex items-center gap-3">
+                <span class="text-4xl">✏️</span>
+                <span>Edit Prompt</span>
+            </h3>
+            <form id="edit-form" class="space-y-6">
                 <input type="hidden" id="edit-key">
                 <div>
-                    <label for="edit-name" class="block text-sm font-medium text-slate-300 mb-1">Sport/Topic Name</label>
-                    <input type="text" id="edit-name" required class="w-full p-3 rounded-lg modal-input">
+                    <label for="edit-name" class="block text-base font-bold text-slate-300 mb-2">Sport/Topic Name</label>
+                    <input type="text" id="edit-name" required class="w-full p-4 rounded-xl modal-input text-lg">
                 </div>
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-2 gap-6">
                     <div>
-                        <label for="edit-icon" class="block text-sm font-medium text-slate-300 mb-1">Icon (emoji)</label>
-                        <input type="text" id="edit-icon" required class="w-full p-3 rounded-lg modal-input">
+                        <label for="edit-icon" class="block text-base font-bold text-slate-300 mb-2">Icon (emoji)</label>
+                        <input type="text" id="edit-icon" required class="w-full p-4 rounded-xl modal-input text-lg text-center">
                     </div>
                     <div>
-                        <label for="edit-category" class="block text-sm font-medium text-slate-300 mb-1">Category</label>
-                        <select id="edit-category" required class="w-full p-3 rounded-lg modal-input">
-                            <option value="traditional">Traditional</option>
-                            <option value="esports">E-Sports</option>
-                            <option value="motor">Motorsport</option>
-                            <option value="virtual">Virtual</option>
-                            <option value="water">Water Sports</option>
-                            <option value="precision">Precision</option>
-                            <option value="winter">Winter</option>
-                            <option value="combat">Combat</option>
-                            <option value="politics">Politics</option>
-                            <option value="logic">Logic</option>
+                        <label for="edit-category" class="block text-base font-bold text-slate-300 mb-2">Category</label>
+                        <select id="edit-category" required class="w-full p-4 rounded-xl modal-input text-lg">
+                            <option value="traditional">🏆 Traditional Sports</option>
+                            <option value="american">🇺🇸 American Sports</option>
+                            <option value="esports">🎮 E-Sports</option>
+                            <option value="motor">🏎️ Motorsport</option>
+                            <option value="combat">🥊 Combat Sports</option>
+                            <option value="water">🏊 Water Sports</option>
+                            <option value="winter">❄️ Winter Sports</option>
+                            <option value="precision">🎯 Precision Sports</option>
+                            <option value="politics">🗳️ Politics</option>
+                            <option value="logic">🧠 Logic & Strategy</option>
                         </select>
                     </div>
                 </div>
                 <div>
-                    <label for="edit-prompt-title" class="block text-sm font-medium text-slate-300 mb-1">Prompt Title</label>
-                    <input type="text" id="edit-prompt-title" required class="w-full p-3 rounded-lg modal-input">
+                    <label for="edit-prompt-title" class="block text-base font-bold text-slate-300 mb-2">Prompt Title</label>
+                    <input type="text" id="edit-prompt-title" required class="w-full p-4 rounded-xl modal-input text-lg">
                 </div>
                 <div>
-                    <label for="edit-prompt" class="block text-sm font-medium text-slate-300 mb-1">Prompt Text</label>
-                    <textarea id="edit-prompt" required rows="6" class="w-full p-3 rounded-lg modal-input resize-y"></textarea>
+                    <label for="edit-prompt" class="block text-base font-bold text-slate-300 mb-2">Prompt Text</label>
+                    <textarea id="edit-prompt" required rows="8" class="w-full p-4 rounded-xl modal-input resize-y text-base leading-relaxed"></textarea>
                 </div>
-                <div class="flex justify-end gap-4 pt-4">
-                    <button type="button" id="cancel-edit-btn" class="px-6 py-2 rounded-lg bg-slate-600 hover:bg-slate-500 transition">Cancel</button>
-                    <button type="submit" class="px-6 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 transition">Save</button>
+                <div class="flex justify-end gap-6 pt-6">
+                    <button type="button" id="cancel-edit-btn" class="px-8 py-3 rounded-xl bg-slate-600 hover:bg-slate-500 transition-all duration-300 font-bold text-lg">Cancel</button>
+                    <button type="submit" class="px-8 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-bold text-lg shadow-lg">Save Changes</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- Confirmation/Alert Modal -->
+    <!-- Enhanced Confirmation/Alert Modal -->
     <div id="alert-modal" class="alert-modal-overlay">
         <div class="alert-modal-content text-center">
-            <h3 id="alert-modal-title" class="text-xl font-bold mb-4 text-white">Warning</h3>
-            <p id="alert-modal-message" class="text-slate-300 mb-6"></p>
-            <div id="alert-modal-buttons" class="flex justify-center gap-4">
+            <div class="text-6xl mb-6">⚠️</div>
+            <h3 id="alert-modal-title" class="text-2xl font-black mb-6 text-white">Warning</h3>
+            <p id="alert-modal-message" class="text-slate-300 mb-8 text-lg leading-relaxed"></p>
+            <div id="alert-modal-buttons" class="flex justify-center gap-6">
                 <!-- Buttons are added dynamically -->
             </div>
         </div>
