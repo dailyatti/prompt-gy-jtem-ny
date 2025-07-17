@@ -419,6 +419,28 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Konkrét mérkőzés opciók megjelenítése/elrejtése
         const supportsSpecificMatch = ['football', 'basketball', 'tennis', 'ice_hockey', 'baseball', 'american_football', 'boxing', 'mma'].includes(key);
+        
+        // Sport-specifikus emoji és placeholder beállítása
+        if (supportsSpecificMatch && elements.sportIcon) {
+            const sportSpecificData = {
+                football: { icon: '⚽', placeholder: 'pl. Barcelona vs Real Madrid' },
+                basketball: { icon: '🏀', placeholder: 'pl. Lakers vs Warriors' },
+                tennis: { icon: '🎾', placeholder: 'pl. Djokovic vs Nadal' },
+                ice_hockey: { icon: '🏒', placeholder: 'pl. Boston Bruins vs Toronto Maple Leafs' },
+                baseball: { icon: '⚾', placeholder: 'pl. Yankees vs Red Sox' },
+                american_football: { icon: '🏈', placeholder: 'pl. Chiefs vs Bills' },
+                boxing: { icon: '🥊', placeholder: 'pl. Fury vs Joshua' },
+                mma: { icon: '🥋', placeholder: 'pl. McGregor vs Khabib' }
+            };
+            
+            const sportData = sportSpecificData[key];
+            if (sportData) {
+                elements.sportIcon.textContent = sportData.icon;
+                if (elements.specificMatchInput) {
+                    elements.specificMatchInput.placeholder = sportData.placeholder;
+                }
+            }
+        }
         if (elements.specificMatchOptions) {
             elements.specificMatchOptions.classList.toggle('hidden', !supportsSpecificMatch);
             
