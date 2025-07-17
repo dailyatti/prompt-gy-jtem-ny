@@ -546,3 +546,38 @@ body.light-theme .bg-slate-800\/30 {
 body.light-theme .border-slate-600\/50 {
     border-color: rgba(203, 213, 225, 0.5) !important;
 } 
+
+/* Új kategóriák */
+.category-special {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7) !important;
+    box-shadow: 0 4px 12px rgba(139,92,246,0.15) !important;
+}
+
+.category-endurance {
+    background: linear-gradient(135deg, #06b6d4, #0891b2) !important;
+    box-shadow: 0 4px 12px rgba(6,182,212,0.15) !important;
+}
+
+.category-logic {
+    background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+    box-shadow: 0 4px 12px rgba(245,158,11,0.15) !important;
+}
+
+/* Világos téma új kategóriák */
+body.light-theme .category-special {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(139,92,246,0.15) !important;
+}
+
+body.light-theme .category-endurance {
+    background: linear-gradient(135deg, #06b6d4, #0891b2) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(6,182,212,0.15) !important;
+}
+
+body.light-theme .category-logic {
+    background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(245,158,11,0.15) !important;
+} 
