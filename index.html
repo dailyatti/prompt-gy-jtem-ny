@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fejlesztett Sportfogadási Prompt Könyvtár</title>
+    <title>Advanced Sports Betting Prompt Library</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="text-white">
-    <!-- Lebegő Háttér Elemek -->
+    <!-- Floating Background Elements -->
     <div class="floating-elements">
         <div class="floating-circle w-72 h-72 top-10 left-10 opacity-20" style="animation-delay: -2s; animation-duration: 18s;"></div>
         <div class="floating-circle w-40 h-40 top-1/3 right-20 opacity-15" style="animation-delay: -5s; animation-duration: 14s;"></div>
@@ -20,50 +20,52 @@
     </div>
 
     <div id="page-top" class="container mx-auto px-4 py-6 lg:py-12 max-w-7xl relative z-10">
-        <!-- Fejléc -->
+        <!-- Header -->
         <header class="text-center mb-8 lg:mb-16 flex flex-col items-center relative">
             <div class="absolute right-0 top-0 flex gap-2 z-20">
-                <button id="theme-toggle" class="bg-slate-700 hover:bg-slate-600 text-white rounded-full p-3 transition-all duration-300 transform hover:scale-110 hover:rotate-12" title="Téma váltás">
+                <button id="theme-toggle" class="bg-slate-700 hover:bg-slate-600 text-white rounded-full p-3 transition-all duration-300 transform hover:scale-110 hover:rotate-12" title="Toggle Theme">
                     <span id="theme-icon" class="text-xl">🌙</span>
                 </button>
             </div>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight header-glow mb-6">AI Prompt Könyvtár</h1>
-            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">Professzionális, szerkeszthető sportfogadási promptok gyűjteménye modern dizájnnal és fejlett funkciókkal.</p>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight header-glow mb-6">AI Prompt Library</h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">Professional collection of editable sports betting and political analysis prompts with modern design and advanced features.</p>
         </header>
 
-        <!-- Keresés és Szűrés -->
+        <!-- Search and Filter -->
         <div class="mb-8 lg:mb-12">
             <div class="search-box rounded-2xl p-4 mb-6 transition-all duration-300">
                 <div class="flex items-center gap-3">
                     <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                    <label for="search-input" class="sr-only">Keress sportágra</label>
-                    <input type="text" id="search-input" placeholder="Keress sportágra..." class="bg-transparent border-none outline-none text-white w-full text-lg placeholder-slate-400">
+                    <label for="search-input" class="sr-only">Search for sports or topics</label>
+                    <input type="text" id="search-input" placeholder="Search for sports or topics..." class="bg-transparent border-none outline-none text-white w-full text-lg placeholder-slate-400">
                 </div>
             </div>
             
             <div class="flex flex-wrap gap-3 justify-center items-center">
-                <button class="category-filter category-badge px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300" data-category="all">Összes</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="favorites">⭐ Kedvencek</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="traditional">Hagyományos</button>
+                <button class="category-filter category-badge px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300" data-category="all">All</button>
+                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="favorites">⭐ Favorites</button>
+                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="traditional">Traditional</button>
                 <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="esports">E-Sports</button>
                 <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="motor">Motorsport</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="virtual">Virtuális</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="water">Vízi</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="precision">Precíziós</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="winter">Téli</button>
-                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="logic">Logikai</button>
-                <button id="add-new-prompt-btn" class="btn-add-new px-4 py-2 rounded-full text-sm font-semibold transition-transform hover:scale-105">Új Prompt Hozzáadása</button>
+                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="virtual">Virtual</button>
+                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="water">Water Sports</button>
+                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="precision">Precision</button>
+                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="winter">Winter</button>
+                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="combat">Combat</button>
+                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="politics">Politics</button>
+                <button class="category-filter px-4 py-2 rounded-full text-sm font-semibold bg-slate-700 hover:bg-slate-600 transition-all duration-300" data-category="logic">Logic</button>
+                <button id="add-new-prompt-btn" class="btn-add-new px-4 py-2 rounded-full text-sm font-semibold transition-transform hover:scale-105">Add New Prompt</button>
             </div>
         </div>
 
-        <!-- Sportágak Rácsa -->
+        <!-- Sports Grid -->
         <div id="sports-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 lg:gap-6 mb-8 lg:mb-12"></div>
-        <div id="no-results" class="text-center py-10" style="display: none;"><p class="text-xl text-slate-400 font-medium">Nincs a szűrésnek megfelelő sportág.</p></div>
+        <div id="no-results" class="text-center py-10" style="display: none;"><p class="text-xl text-slate-400 font-medium">No sports or topics match your filter.</p></div>
         <div id="load-more-sentinel" class="h-1"></div>
 
-        <!-- Prompt Megjelenítő -->
+        <!-- Prompt Display -->
         <div id="prompt-container" class="prompt-container rounded-3xl p-6 lg:p-10 shadow-2xl prompt-transition prompt-hidden">
-            <button id="close-prompt-button" aria-label="Prompt bezárása" class="absolute top-4 right-5 text-slate-400 hover:text-white transition-all duration-300 text-3xl leading-none hover:scale-110 hover:rotate-90">&times;</button>
+            <button id="close-prompt-button" aria-label="Close prompt" class="absolute top-4 right-5 text-slate-400 hover:text-white transition-all duration-300 text-3xl leading-none hover:scale-110 hover:rotate-90">&times;</button>
             <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                 <div>
                     <h2 id="prompt-title" class="text-2xl lg:text-4xl font-bold text-blue-400 mb-2"></h2>
@@ -72,11 +74,11 @@
                 <div class="flex gap-3 mt-4 lg:mt-0">
                     <button id="edit-button" class="bg-slate-600 hover:bg-slate-500 text-white font-semibold py-3 px-6 rounded-xl flex items-center gap-2 transition-all duration-300 transform hover:scale-105">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
-                        Szerkesztés
+                        Edit
                     </button>
                     <button id="copy-button" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl flex items-center gap-2 transition-all duration-300 transform hover:scale-105">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h1V1.5z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg>
-                        <span id="copy-text">Másolás</span>
+                        <span id="copy-text">Copy</span>
                     </button>
                 </div>
             </div>
@@ -84,146 +86,172 @@
                 <textarea id="prompt-text" readonly class="w-full h-80 lg:h-96 bg-slate-900/50 border border-slate-600 rounded-2xl p-6 text-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none text-sm lg:text-base leading-relaxed transition-all duration-300"></textarea>
             </div>
             
-            <!-- Hatékonysági csúszka -->
+            <!-- Effectiveness Slider -->
             <div class="mt-4 p-4 bg-slate-800/30 rounded-xl border border-slate-600/50">
                 <div class="flex items-center justify-between mb-2">
-                    <label for="effectiveness-slider" class="text-sm font-medium text-slate-300">Prompt Hatékonyság</label>
+                    <label for="effectiveness-slider" class="text-sm font-medium text-slate-300">Prompt Effectiveness</label>
                     <span id="effectiveness-value" class="text-sm font-bold text-blue-400">75%</span>
                 </div>
                 <input type="range" id="effectiveness-slider" min="1" max="100" value="75" 
                        class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer slider-thumb">
                 <div class="flex justify-between text-xs text-slate-400 mt-1">
-                    <span>Alacsony (1%)</span>
-                    <span>Közepes (50%)</span>
-                    <span>Magas (100%)</span>
+                    <span>Low (1%)</span>
+                    <span>Medium (50%)</span>
+                    <span>High (100%)</span>
                 </div>
             </div>
             
-            <!-- Konkrét mérkőzés és dátum opciók -->
+            <!-- Specific Match and Date Options -->
             <div id="specific-match-options" class="mt-4 p-4 bg-slate-800/30 rounded-xl border border-slate-600/50 hidden">
-                <h4 class="text-sm font-medium text-slate-300 mb-3">🎯 Konkrét Elemzési Opciók</h4>
+                <h4 class="text-sm font-medium text-slate-300 mb-3">🎯 Specific Analysis Options</h4>
                 
-                <!-- Konkrét mérkőzés opció -->
+                <!-- Specific Match Option -->
                 <div class="mb-3">
                     <label class="flex items-center space-x-2 cursor-pointer">
                         <input type="checkbox" id="specific-match-checkbox" class="form-checkbox h-4 w-4 text-blue-600 bg-slate-700 border-slate-600 rounded focus:ring-blue-500">
-                        <span class="text-sm text-slate-300"><span id="sport-icon">⚽</span> Konkrét mérkőzés megadása</span>
+                        <span class="text-sm text-slate-300"><span id="sport-icon">⚽</span> Specify match details</span>
                     </label>
                     <div id="match-input-container" class="mt-2 hidden">
-                        <input type="text" id="specific-match-input" placeholder="pl. Barcelona vs Real Madrid" 
+                        <input type="text" id="specific-match-input" placeholder="e.g., Barcelona vs Real Madrid" 
                                class="w-full p-2 bg-slate-700 border border-slate-600 rounded-lg text-slate-200 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                     </div>
                 </div>
                 
-                <!-- Konkrét dátum opció -->
+                <!-- Specific Date Option -->
                 <div class="mb-3">
                     <label class="flex items-center space-x-2 cursor-pointer">
                         <input type="checkbox" id="specific-date-checkbox" class="form-checkbox h-4 w-4 text-blue-600 bg-slate-700 border-slate-600 rounded focus:ring-blue-500">
-                        <span class="text-sm text-slate-300">📅 Konkrét dátum megadása</span>
+                        <span class="text-sm text-slate-300">📅 Specify date</span>
                     </label>
                     <div id="date-input-container" class="mt-2 hidden">
                         <input type="date" id="specific-date-input" 
                                class="w-full p-2 bg-slate-700 border border-slate-600 rounded-lg text-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                     </div>
                 </div>
+                
+                <!-- League/Tournament Option -->
+                <div class="mb-3">
+                    <label class="flex items-center space-x-2 cursor-pointer">
+                        <input type="checkbox" id="specific-league-checkbox" class="form-checkbox h-4 w-4 text-blue-600 bg-slate-700 border-slate-600 rounded focus:ring-blue-500">
+                        <span class="text-sm text-slate-300">🏆 Specify league/tournament</span>
+                    </label>
+                    <div id="league-input-container" class="mt-2 hidden">
+                        <input type="text" id="specific-league-input" placeholder="e.g., Premier League, Champions League" 
+                               class="w-full p-2 bg-slate-700 border border-slate-600 rounded-lg text-slate-200 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                </div>
+                
+                <!-- Season Option -->
+                <div class="mb-3">
+                    <label class="flex items-center space-x-2 cursor-pointer">
+                        <input type="checkbox" id="specific-season-checkbox" class="form-checkbox h-4 w-4 text-blue-600 bg-slate-700 border-slate-600 rounded focus:ring-blue-500">
+                        <span class="text-sm text-slate-300">📊 Specify season</span>
+                    </label>
+                    <div id="season-input-container" class="mt-2 hidden">
+                        <input type="text" id="specific-season-input" placeholder="e.g., 2024-25, 2024" 
+                               class="w-full p-2 bg-slate-700 border border-slate-600 rounded-lg text-slate-200 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                </div>
             </div>
             
-            <div id="copy-feedback" class="text-center text-green-400 mt-4 h-6 transition-all duration-300 opacity-0 font-semibold">✓ Prompt sikeresen a vágólapra másolva!</div>
+            <div id="copy-feedback" class="text-center text-green-400 mt-4 h-6 transition-all duration-300 opacity-0 font-semibold">✓ Prompt successfully copied to clipboard!</div>
             
-            <!-- Eszköz gombok prompt ablak alján -->
+            <!-- Tool buttons at bottom of prompt window -->
             <div class="tools-inline mt-6 flex flex-wrap gap-4 justify-center" id="tools-inline" style="display:none;">
-                <button id="export-btn-inline" class="tool-btn px-4 py-2 rounded-full transition-all duration-300" title="Exportálás JSON-ba">
+                <button id="export-btn-inline" class="tool-btn px-4 py-2 rounded-full transition-all duration-300" title="Export to JSON">
                     <span>📥</span><span class="ml-2">Export</span>
                 </button>
-                <label for="import-input-inline" class="tool-btn px-4 py-2 rounded-full cursor-pointer transition-all duration-300" title="Importálás JSON-ból">
+                <label for="import-input-inline" class="tool-btn px-4 py-2 rounded-full cursor-pointer transition-all duration-300" title="Import from JSON">
                     <span>📤</span><span class="ml-2">Import</span>
                     <input id="import-input-inline" type="file" accept="application/json" class="hidden" />
                 </label>
-                <button id="reset-btn-inline" class="tool-btn px-4 py-2 rounded-full transition-all duration-300" title="Visszaállítás alapértelmezettre">
-                    <span>🔄</span><span class="ml-2">Visszaállítás</span>
+                <button id="reset-btn-inline" class="tool-btn px-4 py-2 rounded-full transition-all duration-300" title="Reset to defaults">
+                    <span>🔄</span><span class="ml-2">Reset</span>
                 </button>
             </div>
         </div>
             
-        <!-- Eszköz szekció az oldal alján -->
+        <!-- Tools section at bottom of page -->
         <div class="tools-section rounded-3xl p-8" id="tools-section">
-            <h2 class="text-2xl font-bold text-center mb-8 text-white">Eszközök és Beállítások</h2>
+            <h2 class="text-2xl font-bold text-center mb-8 text-white">Tools and Settings</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center flex flex-col items-center">
-                    <button id="export-btn" class="bg-green-600 hover:bg-green-700 text-white rounded-full p-4 transition-all duration-300 transform hover:scale-110 mb-3" title="Exportálás JSON-ba">
+                    <button id="export-btn" class="bg-green-600 hover:bg-green-700 text-white rounded-full p-4 transition-all duration-300 transform hover:scale-110 mb-3" title="Export to JSON">
                         <span class="text-2xl">📥</span>
                     </button>
-                    <h3 class="font-semibold mb-2 text-slate-200">Exportálás</h3>
-                    <p class="text-sm text-slate-400">Mentsd el az összes promptodat JSON fájlba biztonsági mentésként vagy megosztáshoz.</p>
+                    <h3 class="font-semibold mb-2 text-slate-200">Export</h3>
+                    <p class="text-sm text-slate-400">Save all your prompts to a JSON file for backup or sharing.</p>
                 </div>
                 <div class="text-center flex flex-col items-center">
-                    <label for="import-input" class="inline-block bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 transition-all duration-300 transform hover:scale-110 cursor-pointer mb-3" title="Importálás JSON-ból">
+                    <label for="import-input" class="inline-block bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 transition-all duration-300 transform hover:scale-110 cursor-pointer mb-3" title="Import from JSON">
                         <span class="text-2xl">📤</span>
                         <input id="import-input" type="file" accept="application/json" class="hidden" />
                     </label>
-                    <h3 class="font-semibold mb-2 text-slate-200">Importálás</h3>
-                    <p class="text-sm text-slate-400">Tölts be korábban mentett promptokat JSON fájlból.</p>
+                    <h3 class="font-semibold mb-2 text-slate-200">Import</h3>
+                    <p class="text-sm text-slate-400">Load previously saved prompts from a JSON file.</p>
                 </div>
                 <div class="text-center flex flex-col items-center">
-                    <button id="reset-btn" class="bg-red-600 hover:bg-red-700 text-white rounded-full p-4 transition-all duration-300 transform hover:scale-110 mb-3" title="Visszaállítás alapértelmezettre">
+                    <button id="reset-btn" class="bg-red-600 hover:bg-red-700 text-white rounded-full p-4 transition-all duration-300 transform hover:scale-110 mb-3" title="Reset to defaults">
                         <span class="text-2xl">🔄</span>
                     </button>
-                    <h3 class="font-semibold mb-2 text-slate-200">Visszaállítás</h3>
-                    <p class="text-sm text-slate-400">Állítsd vissza az eredeti promptokat. Figyelem: minden egyéni prompt törlődik!</p>
+                    <h3 class="font-semibold mb-2 text-slate-200">Reset</h3>
+                    <p class="text-sm text-slate-400">Restore original prompts. Warning: all custom prompts will be deleted!</p>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- Hozzáadás/Szerkesztés Modál -->
+    <!-- Add/Edit Modal -->
     <div id="edit-modal" class="modal-overlay">
         <div class="modal-content">
-            <h3 id="modal-title" class="text-2xl font-bold mb-6 text-white">Prompt Szerkesztése</h3>
+            <h3 id="modal-title" class="text-2xl font-bold mb-6 text-white">Edit Prompt</h3>
             <form id="edit-form" class="space-y-4">
                 <input type="hidden" id="edit-key">
                 <div>
-                    <label for="edit-name" class="block text-sm font-medium text-slate-300 mb-1">Sportág Neve</label>
+                    <label for="edit-name" class="block text-sm font-medium text-slate-300 mb-1">Sport/Topic Name</label>
                     <input type="text" id="edit-name" required class="w-full p-3 rounded-lg modal-input">
                 </div>
                 <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <label for="edit-icon" class="block text-sm font-medium text-slate-300 mb-1">Ikon (emoji)</label>
+                        <label for="edit-icon" class="block text-sm font-medium text-slate-300 mb-1">Icon (emoji)</label>
                         <input type="text" id="edit-icon" required class="w-full p-3 rounded-lg modal-input">
                     </div>
                     <div>
-                        <label for="edit-category" class="block text-sm font-medium text-slate-300 mb-1">Kategória</label>
+                        <label for="edit-category" class="block text-sm font-medium text-slate-300 mb-1">Category</label>
                         <select id="edit-category" required class="w-full p-3 rounded-lg modal-input">
-                            <option value="traditional">Hagyományos</option>
+                            <option value="traditional">Traditional</option>
                             <option value="esports">E-Sports</option>
                             <option value="motor">Motorsport</option>
-                            <option value="virtual">Virtuális</option>
-                            <option value="water">Vízi</option>
-                            <option value="precision">Precíziós</option>
-                            <option value="winter">Téli</option>
-                            <option value="logic">Logikai</option>
+                            <option value="virtual">Virtual</option>
+                            <option value="water">Water Sports</option>
+                            <option value="precision">Precision</option>
+                            <option value="winter">Winter</option>
+                            <option value="combat">Combat</option>
+                            <option value="politics">Politics</option>
+                            <option value="logic">Logic</option>
                         </select>
                     </div>
                 </div>
                 <div>
-                    <label for="edit-prompt-title" class="block text-sm font-medium text-slate-300 mb-1">Prompt Címe</label>
+                    <label for="edit-prompt-title" class="block text-sm font-medium text-slate-300 mb-1">Prompt Title</label>
                     <input type="text" id="edit-prompt-title" required class="w-full p-3 rounded-lg modal-input">
                 </div>
                 <div>
-                    <label for="edit-prompt" class="block text-sm font-medium text-slate-300 mb-1">Prompt Szövege</label>
+                    <label for="edit-prompt" class="block text-sm font-medium text-slate-300 mb-1">Prompt Text</label>
                     <textarea id="edit-prompt" required rows="6" class="w-full p-3 rounded-lg modal-input resize-y"></textarea>
                 </div>
                 <div class="flex justify-end gap-4 pt-4">
-                    <button type="button" id="cancel-edit-btn" class="px-6 py-2 rounded-lg bg-slate-600 hover:bg-slate-500 transition">Mégse</button>
-                    <button type="submit" class="px-6 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 transition">Mentés</button>
+                    <button type="button" id="cancel-edit-btn" class="px-6 py-2 rounded-lg bg-slate-600 hover:bg-slate-500 transition">Cancel</button>
+                    <button type="submit" class="px-6 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 transition">Save</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- Megerősítés/Alert Modál -->
+    <!-- Confirmation/Alert Modal -->
     <div id="alert-modal" class="alert-modal-overlay">
         <div class="alert-modal-content text-center">
-            <h3 id="alert-modal-title" class="text-xl font-bold mb-4 text-white">Figyelem</h3>
+            <h3 id="alert-modal-title" class="text-xl font-bold mb-4 text-white">Warning</h3>
             <p id="alert-modal-message" class="text-slate-300 mb-6"></p>
             <div id="alert-modal-buttons" class="flex justify-center gap-4">
                 <!-- Buttons are added dynamically -->
@@ -233,4 +261,4 @@
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
